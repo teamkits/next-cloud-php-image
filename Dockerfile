@@ -4,7 +4,7 @@ FROM php:7.3.0-fpm-alpine3.8
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 # Install PHP ext
-ENV NC_DEP_MODS gd zip mysqli pdo_mysql
+ENV NC_DEP_MODS gd zip intl mysqli pdo_mysql
 ENV NC_DEPS libzip-dev zlib-dev freetype-dev jpeg-dev libpng-dev
 
 RUN apk add --no-cache $NC_DEPS
